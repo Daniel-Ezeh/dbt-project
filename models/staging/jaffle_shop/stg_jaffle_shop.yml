@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_car_sales
+    columns: 
+      - name: vehicle_id
+        tests:
+        - unique
+        - not_null
+      - name: transmission
+        tests:
+          - accepted_values:
+              values:
+                - automatic
+                - manual
+
+
+  - name: stg_properties
+    columns:
+      - name: Serial_id
+        tests:
+          - not_null
+              
+            
+
