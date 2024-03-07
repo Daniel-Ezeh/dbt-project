@@ -4,6 +4,7 @@ models:
   - name: stg_car_sales
     columns: 
       - name: vehicle_id
+        description: primary key
         tests:
         - unique
         - not_null
@@ -16,6 +17,7 @@ models:
 
 
   - name: stg_properties
+    description: '{{ doc("order_status") }}'
     columns:
       - name: Serial_id
         tests:
