@@ -40,3 +40,8 @@ models:
         +materialized: table
     staging:
       +materialized: view
+
+
+vars:
+    raw_database: "dbt_dezeh"
+    raw_schema: "customers"
