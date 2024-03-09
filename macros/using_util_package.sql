@@ -13,3 +13,4 @@ select {{ dbt_utils.generate_surrogate_key(['Serial_id', 'Address']) }} as id,
 -- )
 -- }}
 #}
+
