@@ -1,8 +1,8 @@
 
--- select {{ dbt_utils.generate_surrogate_key(['Serial_id', 'Address']) }} as id,
---     Address,
---     Sale_Amount
---  from {{ ref("stg_properties") }}
+select {{ dbt_utils.generate_surrogate_key(['Serial_id', 'Address']) }} as id,
+    Address,
+    Sale_Amount
+ from {{ ref("stg_properties") }}
 
 
 {#-- {{
@@ -14,8 +14,3 @@
 -- }}
 #}
 
-{% set query %}
-    ref("dim_customers")
-{% endset %}
-
- run_query('SELECT * FROM {{query}}') 
